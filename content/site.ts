@@ -353,8 +353,7 @@ export const people: Person[] = [
     photo: "https://praevo.com.au/wp-content/uploads/2025/01/Prakash-Srinivasan_1.jpg",
     qualifications: ["Bachelor of Laws, University of New England"],
     admissions: [
-      "Admitted to the Supreme Court of Victoria",
-      "Entered on the Register of Practitioners of the High Court of Australia",
+      "Admitted to practise in the Supreme Court of Victoria and the High Court of Australia",
       "Holds a principal practising certificate issued by the Victorian Legal Services Board",
     ],
     languages: ["English", "Hindi", "Tamil", "Kannada"],
