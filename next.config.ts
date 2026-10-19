@@ -16,10 +16,10 @@ const nextConfig: NextConfig = {
       ["/privacy-policy", "/legal/privacy"],
       ["/disclaimer", "/legal/disclaimer"],
       ["/terms-conditions", "/legal/terms"],
-      ["/family-law-understanding-child-custody-in-divorce-cases", "/insights"],
-      ["/commercial-law-the-importance-of-contract-law-in-business", "/insights"],
-      ["/immigration-law-steps-to-obtaining-permanent-residency", "/insights"],
-      ["/criminal-law-your-rights-during-an-arrest", "/insights"],
+      ["/family-law-understanding-child-custody-in-divorce-cases", "/insights/parenting-arrangements-after-separation"],
+      ["/commercial-law-the-importance-of-contract-law-in-business", "/insights/contracts-in-business"],
+      ["/immigration-law-steps-to-obtaining-permanent-residency", "/insights/pathways-to-permanent-residence"],
+      ["/criminal-law-your-rights-during-an-arrest", "/insights/your-rights-if-arrested-in-victoria"],
     ];
     return old.flatMap(([source, destination]) => [
       { source, destination, permanent: true },

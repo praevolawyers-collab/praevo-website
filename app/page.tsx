@@ -97,8 +97,13 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <h2 style={{ marginBottom: 28 }}>What clients say</h2>
-          {/* Embed a live Google Business Profile reviews widget here. Do not hand-type testimonials. */}
-          <div className="placeholder">[Live Google reviews feed from Praevo&apos;s Google Business Profile]</div>
+          <div className="card" style={{ display: "flex", flexWrap: "wrap", gap: 20, alignItems: "center", justifyContent: "space-between" }}>
+            <p style={{ margin: 0, maxWidth: 560 }}>Read what our clients say on Google, or share your own experience of working with us.</p>
+            <div className="btns" style={{ marginTop: 0 }}>
+              <a href={firm.googleProfileUrl} className="btn btn-dark" target="_blank" rel="noopener noreferrer">Read our Google reviews</a>
+              <a href={firm.googleReviewUrl} className="btn btn-gold" target="_blank" rel="noopener noreferrer">Leave a review</a>
+            </div>
+          </div>
         </div>
       </section>
 

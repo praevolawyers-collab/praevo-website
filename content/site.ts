@@ -21,6 +21,8 @@ export const firm = {
   email: "info@praevo.com.au",
   hours: "Monday to Friday, 9:00am – 5:30pm (Melbourne time)",
   consultationFee: "$330, plus GST for clients in Australia",
+  googleReviewUrl: "https://g.page/r/CeQW4i0Qfzy-EAE/review",
+  googleProfileUrl: "https://www.google.com/maps/search/?api=1&query=Praevo+Lawyers+227+Collins+Street+Melbourne",
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/praevolawyers/30min",
   regulatory:
     "Praevo Lawyers is an Australian law practice regulated in Victoria by the Victorian Legal Services Board and Commissioner. We advise on Australian law. Where Indian or other foreign law applies, we work alongside independent lawyers qualified in that country, who are engaged by you directly.",
@@ -388,7 +390,7 @@ export const people: Person[] = [
     qualifications: ["Bachelor of Laws and Bachelor of Commerce"],
     admissions: ["Admitted to the Supreme Court of Victoria"],
     languages: ["English", "Kannada"],
-    areas: ["Commercial law", "[other practice areas]"],
+    areas: ["Family law", "Commercial law", "Visas & migration", "Criminal law", "Disputes & litigation"],
     bio: [
       "Neha combines legal reasoning with commercial awareness, and gives practical advice tailored to each client.",
     ],
@@ -403,7 +405,7 @@ export const people: Person[] = [
       "Currently studying a Bachelor of Laws",
     ],
     admissions: [],
-    languages: ["English", "[other languages]"],
+    languages: ["English", "Turkish"],
     areas: ["Visas & migration"],
     bio: [
       "Sev supports our migration team, guiding clients through each step of the visa process. Sev is not a lawyer, and all legal advice is given by our solicitors.",
