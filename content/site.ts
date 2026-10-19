@@ -21,7 +21,7 @@ export const firm = {
   email: "info@praevo.com.au",
   hours: "Monday to Friday, 9:00am – 5:30pm (Melbourne time)",
   consultationFee: "$330, plus GST for clients in Australia",
-  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL || "",
+  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/praevolawyers/30min",
   regulatory:
     "Praevo Lawyers is an Australian law practice regulated in Victoria by the Victorian Legal Services Board and Commissioner. We advise on Australian law. Where Indian or other foreign law applies, we work alongside independent lawyers qualified in that country, who are engaged by you directly.",
   pss: "Liability limited by a scheme approved under Professional Standards Legislation.",
