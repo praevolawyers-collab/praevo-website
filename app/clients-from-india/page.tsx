@@ -14,7 +14,7 @@ export default function India() {
       <PageHero
         eyebrow="Clients from India"
         title="Australian legal help for Indian families and businesses."
-        lead="We advise on the Australian side of your matter, in English, Hindi, Tamil or Kannada, and coordinate with independent Indian law firms where Indian law applies."
+        lead="We advise on the Australian side of your matter, in English, Hindi, Tamil, Kannada or Marathi, and coordinate with independent Indian law firms where Indian law applies."
       />
       <section className="section">
         <div className="wrap">

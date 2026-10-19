@@ -20,7 +20,7 @@ export const firm = {
   whatsappHref: "https://wa.me/61413030361",
   email: "info@praevo.com.au",
   hours: "Monday to Friday, 9:00am – 5:30pm (Melbourne time)",
-  consultationFee: "[Consultation fee, including GST]",
+  consultationFee: "$330, plus GST for clients in Australia",
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL || "",
   regulatory:
     "Praevo Lawyers is an Australian law practice regulated in Victoria by the Victorian Legal Services Board and Commissioner. We advise on Australian law. Where Indian or other foreign law applies, we work alongside independent lawyers qualified in that country, who are engaged by you directly.",
@@ -353,8 +353,8 @@ export const people: Person[] = [
     photo: "https://praevo.com.au/wp-content/uploads/2025/01/Prakash-Srinivasan_1.jpg",
     qualifications: ["Bachelor of Laws, University of New England"],
     admissions: [
-      "Admitted to the Supreme Court of Victoria [admission date]",
-      "Entered on the Register of Practitioners of the High Court of Australia, October 2022",
+      "Admitted to the Supreme Court of Victoria",
+      "Entered on the Register of Practitioners of the High Court of Australia",
       "Holds a principal practising certificate issued by the Victorian Legal Services Board",
     ],
     languages: ["English", "Hindi", "Tamil", "Kannada"],
@@ -374,7 +374,7 @@ export const people: Person[] = [
       "Postgraduate qualifications in human resource management, University of Wollongong",
     ],
     admissions: ["Admitted to the Supreme Court of Victoria", "Formerly practised as an advocate in India"],
-    languages: ["English", "[second language]"],
+    languages: ["English", "Hindi", "Marathi"],
     areas: ["Family law", "Commercial law", "Visas & migration", "Criminal law", "Disputes & litigation"],
     bio: [
       "Zubin brings more than a decade of courtroom and advisory experience, including practice as an advocate in India before admission in Victoria.",
@@ -388,7 +388,7 @@ export const people: Person[] = [
     photo: "https://praevo.com.au/wp-content/uploads/2025/01/Neha-Prakash_1-214x300.jpg",
     qualifications: ["Bachelor of Laws and Bachelor of Commerce"],
     admissions: ["Admitted to the Supreme Court of Victoria"],
-    languages: ["English", "[other languages]"],
+    languages: ["English", "Kannada"],
     areas: ["Commercial law", "[other practice areas]"],
     bio: [
       "Neha combines legal reasoning with commercial awareness, and gives practical advice tailored to each client.",

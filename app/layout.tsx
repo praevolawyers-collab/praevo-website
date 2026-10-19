@@ -29,7 +29,7 @@ const jsonLd = {
     addressCountry: "AU",
   },
   areaServed: ["AU", "IN"],
-  knowsLanguage: ["en", "hi", "ta", "kn"],
+  knowsLanguage: ["en", "hi", "ta", "kn", "mr"],
   knowsAbout: areas.map((a) => a.title),
 };
 

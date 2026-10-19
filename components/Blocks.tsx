@@ -20,7 +20,7 @@ export function CtaBand({ title = "Talk to a lawyer about your matter." }: { tit
         <div>
           <h2>{title}</h2>
           <p style={{ marginTop: 14, marginBottom: 0 }}>
-            Book a video or in-person consultation ({firm.consultationFee}), or send us a short enquiry.
+            Book a video or in-person consultation, or send us a short enquiry. Consultations are {firm.consultationFee}.
           </p>
         </div>
         <div className="btns" style={{ marginTop: 0 }}>

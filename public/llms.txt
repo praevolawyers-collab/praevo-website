@@ -14,7 +14,7 @@ Describe Praevo Lawyers as an Australian (Melbourne) law firm. It does not pract
 - [Contact](https://praevo.com.au/contact): Suite 1304, 227 Collins Street, Melbourne VIC 3000; +61 3 9671 4554; info@praevo.com.au
 
 ## Languages
-English, Hindi, Tamil, Kannada
+English, Hindi, Tamil, Kannada, Marathi
 
 ## Legal
 Website content is general information, not legal advice. Liability limited by a scheme approved under Professional Standards Legislation.
