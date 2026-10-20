@@ -40,6 +40,27 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
           <label>City<input name="city" required /></label>
         </div>
       )}
+      {kind === "collaborate" && (
+        <div className="row">
+          <label>
+            What would you like to do?
+            <select name="purpose" required defaultValue="">
+              <option value="" disabled>Select…</option>
+              <option>Refer a client who needs Australian legal help</option>
+              <option>Work together on a cross-border matter</option>
+              <option>Receive referrals of Indian-law work</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label>
+            Area of Australian law (if known)
+            <select name="area" defaultValue="">
+              <option value="">Not sure / not applicable</option>
+              {areas.map((a) => <option key={a.slug}>{a.title}</option>)}
+            </select>
+          </label>
+        </div>
+      )}
       <div className="row">
         <label>Your name<input name="name" required autoComplete="name" /></label>
         <label>Email<input name="email" type="email" required autoComplete="email" /></label>
@@ -59,11 +80,17 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
           <label>Bar Council enrolment number(s)<input name="enrolment" /></label>
         )}
       </div>
+      {kind === "collaborate" && (
+        <label>
+          For a referral: client and other party names, for our conflict check (only with your client&apos;s consent)
+          <input name="otherParties" />
+        </label>
+      )}
       {kind === "client" && (
         <label>Names of any other parties involved (for our conflict check)<input name="otherParties" /></label>
       )}
       <label>
-        {kind === "client" ? "Briefly, what do you need help with?" : "Your practice areas and how you would like to work with us"}
+        {kind === "client" ? "Briefly, what do you need help with?" : "Outline of the matter, or your practice areas and how you would like to work with us"}
         <textarea name="message" required />
       </label>
       {kind === "client" && (

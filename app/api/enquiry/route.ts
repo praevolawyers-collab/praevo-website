@@ -24,7 +24,7 @@ export async function POST(req: Request) {
   if (!key || !to || !from) return Response.json({ ok: false, error: "Email not configured" }, { status: 500 });
 
   const kind = body.kind === "collaborate" ? "Collaboration enquiry" : "Client enquiry";
-  const fields = ["firm", "city", "enrolment", "name", "email", "phone", "area", "otherParties", "message"];
+  const fields = ["purpose", "firm", "city", "enrolment", "name", "email", "phone", "area", "otherParties", "message"];
   const text = fields
     .filter((f) => body[f])
     .map((f) => `${f}: ${clean(body[f])}`)
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       from,
       to,
       reply_to: clean(body.email),
-      subject: `${kind} – ${clean(body.name)}${body.area ? ` – ${clean(body.area)}` : ""}`,
+      subject: `${kind}${body.purpose ? ` (${clean(body.purpose)})` : ""} – ${clean(body.firm || body.name)}${body.area ? ` – ${clean(body.area)}` : ""}`,
       text,
     }),
   });
