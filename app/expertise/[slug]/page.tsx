@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { areas } from "@/content/site";
+import { articles, topicSlug } from "@/content/insights";
+import ArticleGrid from "@/components/ArticleGrid";
 import { PageHero, CtaBand } from "@/components/Blocks";
 
 export function generateStaticParams() {
@@ -18,6 +20,7 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const a = areas.find((x) => x.slug === slug);
   if (!a) notFound();
+  const posts = articles.filter((p) => topicSlug(p) === a.slug);
 
   const faqLd = {
     "@context": "https://schema.org",
@@ -69,6 +72,14 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
           <p className="small muted" style={{ marginTop: 20 }}>General information only, not legal advice for your situation.</p>
         </div>
       </section>
+      {posts.length > 0 && (
+        <section className="section">
+          <div className="wrap">
+            <h2 style={{ marginBottom: 32 }}>Read more on {a.title.toLowerCase()}</h2>
+            <ArticleGrid items={posts} />
+          </div>
+        </section>
+      )}
       <CtaBand />
     </>
   );

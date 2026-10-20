@@ -202,3 +202,20 @@ p { margin: 0 0 1rem; }
 .whatsapp { position: fixed; right: 20px; bottom: 20px; z-index: 30; background: #1f7a4d; color: #fff; border-radius: 999px; padding: 12px 18px; min-height: 48px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 600; box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
 .whatsapp:hover { color: #fff; background: #17633e; }
 @media (max-width: 600px) { .whatsapp { right: 12px; bottom: 12px; padding: 10px 14px; font-size: 0.9rem; } }
+
+/* blog */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+.chip { display: inline-flex; align-items: center; min-height: 40px; padding: 8px 16px; border-radius: 999px; border: 1px solid #cfc7b5; background: #fff; color: var(--ink); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+.chip:hover { border-color: var(--gold); color: var(--gold-text); }
+.chip.active { background: var(--charcoal); border-color: var(--charcoal); color: var(--gold-light); }
+.posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; }
+.post { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; text-decoration: none; color: var(--ink); transition: box-shadow 0.15s, border-color 0.15s; }
+.post:hover { border-color: var(--gold); box-shadow: 0 10px 26px rgba(0,0,0,0.08); color: var(--ink); }
+.post img { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; border-bottom: 1px solid var(--line); }
+.post-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.post-cat { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600; color: var(--gold-text); }
+.post h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 500; line-height: 1.2; }
+.post p { margin: 0; font-size: 0.95rem; color: var(--muted); flex: 1; }
+.post-meta { font-size: 0.85rem; color: var(--gold-text); font-weight: 600; margin-top: 6px; }
+.article-cover { width: 100%; height: auto; border-radius: 8px; margin-bottom: 28px; border: 1px solid var(--line); }
+@media (min-width: 961px) { .nav-list > li:nth-last-child(-n+2) .dropdown { left: auto; right: 0; } }

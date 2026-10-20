@@ -1,29 +1,24 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { articles } from "@/content/insights";
-import { PageHero } from "@/components/Blocks";
+import { PageHero, CtaBand } from "@/components/Blocks";
+import ArticleGrid, { TopicChips } from "@/components/ArticleGrid";
 
 export const metadata: Metadata = {
-  title: "Insights",
-  description: "Legal updates and practical guides from Praevo Lawyers, Melbourne.",
+  title: "Blog",
+  description: "Practical guides to Australian law from Praevo Lawyers, Melbourne: visas, employer sponsorship, property, family law, wills, disputes, criminal law and cross-border matters.",
 };
 
 export default function Insights() {
   return (
     <>
-      <PageHero eyebrow="Insights" title="Legal updates and practical guides." />
+      <PageHero eyebrow="Insights · Blog" title="Practical guides to Australian law." lead="Plain-English articles on the matters our clients ask about most. General information only, not legal advice." />
       <section className="section">
-        <div className="wrap cards">
-          {articles.map((a) => (
-            <Link key={a.slug} href={`/insights/${a.slug}`} className="card" style={{ textDecoration: "none", color: "inherit" }}>
-              <p className="eyebrow" style={{ marginBottom: 10 }}>{a.category}</p>
-              <h3 style={{ fontFamily: "var(--serif)", fontSize: "1.4rem", fontWeight: 500 }}>{a.title}</h3>
-              <p>{a.summary}</p>
-              <p className="small">Updated {a.updated}</p>
-            </Link>
-          ))}
+        <div className="wrap">
+          <TopicChips />
+          <ArticleGrid items={[...articles].reverse()} />
         </div>
       </section>
+      <CtaBand />
     </>
   );
 }

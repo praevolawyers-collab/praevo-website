@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { firm, areas } from "@/content/site";
-import { articles } from "@/content/insights";
+import { topics } from "@/content/insights";
 
 type Item = { href: string; label: string };
 type Menu = { label: string; href?: string; items?: Item[]; footer?: Item };
@@ -28,8 +28,7 @@ const menus: Menu[] = [
   { label: "Clients from India", href: "/clients-from-india" },
   {
     label: "Insights",
-    items: articles.map((a) => ({ href: `/insights/${a.slug}`, label: a.title })),
-    footer: { href: "/insights", label: "All articles →" },
+    items: [{ href: "/insights", label: "Blog: all articles" }, ...topics.map((t) => ({ href: `/insights/topic/${t.slug}`, label: t.title }))],
   },
   { label: "Contact", href: "/contact" },
 ];

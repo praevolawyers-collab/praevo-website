@@ -1,3 +1,5 @@
+import { areas } from "./site";
+
 // Articles for the Insights section. Updated October 2026 from the original posts on the old website.
 
 export type Block = { h?: string; p?: string[]; list?: string[] };
@@ -271,4 +273,349 @@ export const articles: Article[] = [
       },
     ],
   },
+
+  {
+    slug: "sponsoring-overseas-workers",
+    oldSlug: "",
+    title: "Sponsoring overseas workers: a guide for Australian employers",
+    summary:
+      "How the Skills in Demand visa works, what it costs, and the obligations that come with being an approved sponsor.",
+    category: "Employer sponsorship",
+    author: "Prakash Srinivasan",
+    published: "21 October 2026",
+    updated: "21 October 2026",
+    body: [
+      {
+        p: [
+          "When you cannot find the skills you need in Australia, sponsoring a worker from overseas can fill the gap. Sponsorship is a three-step process, and each step has its own requirements.",
+        ],
+      },
+      {
+        h: "The three steps",
+        list: [
+          "Sponsorship: the business applies to become an approved standard business sponsor.",
+          "Nomination: the business nominates a specific position, occupation and salary.",
+          "Visa: the worker applies for the visa, usually the Skills in Demand visa (subclass 482).",
+        ],
+      },
+      {
+        h: "The Skills in Demand visa (subclass 482)",
+        p: [
+          "The Skills in Demand visa replaced the Temporary Skill Shortage visa in December 2024. Its main streams are:",
+        ],
+        list: [
+          "Specialist Skills: for highly paid roles. From 1 July 2026, the salary must be at least the Specialist Skills Income Threshold of $146,717.",
+          "Core Skills: for occupations on the Core Skills Occupation List, with a salary of at least the Core Skills Income Threshold, $79,499 from 1 July 2026.",
+          "Labour Agreement: for employers with a negotiated labour agreement.",
+        ],
+      },
+      {
+        p: [
+          "Thresholds are indexed each year. In every case, the salary must also be at least the market rate paid to Australian workers in the same role.",
+        ],
+      },
+      {
+        h: "Costs for the employer",
+        p: [
+          "Employers pay the nomination fee and the Skilling Australians Fund levy, which depends on business turnover and the length of the visa. These costs cannot be passed on to the worker. Asking or allowing a worker to pay them is a breach of sponsorship obligations.",
+        ],
+      },
+      {
+        h: "Your obligations as a sponsor",
+        list: [
+          "pay the nominated salary and give the same terms as Australian employees",
+          "make sure the worker only does the nominated occupation",
+          "keep records and notify the Department of Home Affairs of certain events, such as the worker leaving",
+          "co-operate with monitoring and inspectors",
+          "pay reasonable return travel costs if asked",
+        ],
+      },
+      {
+        p: [
+          "Breaches can lead to fines, a bar on sponsoring, or cancellation of the sponsorship.",
+        ],
+      },
+      {
+        h: "A path to permanent residence",
+        p: [
+          "Many sponsored workers later move to permanent residence through the Employer Nomination Scheme (subclass 186). Planning for this from the start makes the transition smoother for both employer and employee.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "setting-up-a-business-in-australia",
+    oldSlug: "",
+    title: "Setting up a business in Australia from India or overseas",
+    summary:
+      "Company or branch, director requirements, registrations, foreign investment approval and the India-side steps to plan for.",
+    category: "Market entry & FIRB",
+    author: "Prakash Srinivasan",
+    published: "21 October 2026",
+    updated: "21 October 2026",
+    body: [
+      {
+        p: [
+          "Australia is a natural next market for many Indian businesses. A common legal system, the English language and the Australia–India Economic Cooperation and Trade Agreement (ECTA) all help. Getting the structure right at the start saves cost and delay later.",
+        ],
+      },
+      {
+        h: "Company or branch?",
+        list: [
+          "Australian subsidiary: a separate Australian company (usually a proprietary limited company). It limits liability to the Australian business and is the most common choice.",
+          "Branch: the overseas company registers with ASIC as a foreign company and trades directly. It is simpler to set up, but the parent company is directly liable.",
+        ],
+      },
+      {
+        h: "Key registrations",
+        list: [
+          "company registration with ASIC; a proprietary company needs at least one director who ordinarily lives in Australia",
+          "Australian Business Number (ABN) and tax file number",
+          "GST registration once turnover reaches the threshold",
+          "business name, trade mark and any industry licences",
+        ],
+      },
+      {
+        h: "Do you need foreign investment approval?",
+        p: [
+          "Foreign investors may need approval through the Foreign Investment Review Board (FIRB) depending on the type of investment and its value. Monetary thresholds for 2026 include $347 million for most private investors, and $560 million for private Indian investors acquiring non-sensitive service businesses. Lower thresholds, including $0, apply to residential land, national security businesses and some other investments. Check the current thresholds before you sign.",
+        ],
+      },
+      {
+        h: "Staff and visas",
+        p: [
+          "If you are bringing managers or specialists from India, plan the visas early. The Skills in Demand visa and related nominations take time, and the business must first be approved as a sponsor.",
+        ],
+      },
+      {
+        h: "The India side",
+        p: [
+          "An Indian company investing in Australia must comply with India's overseas direct investment rules under FEMA. That is Indian law, handled by your Indian advisers. We coordinate with them so the Australian structure and the Indian approvals line up.",
+        ],
+      },
+      {
+        h: "Tax",
+        p: [
+          "Get tax advice in both countries before you choose a structure. The Australia–India double taxation agreement affects how profits, dividends and services are taxed.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "buying-property-in-victoria-from-overseas",
+    oldSlug: "",
+    title: "Buying property in Victoria as a foreign or overseas buyer",
+    summary:
+      "The ban on foreign purchases of established homes, FIRB approval, Victoria's foreign purchaser duty and land tax surcharges.",
+    category: "Property",
+    author: "Prakash Srinivasan",
+    published: "21 October 2026",
+    updated: "21 October 2026",
+    body: [
+      {
+        p: [
+          "Whether you are a “foreign person” decides most of the rules. Australian citizens are not foreign persons, even if they live overseas. Permanent residents are generally not foreign persons if they live in Australia. Temporary visa holders and most overseas residents are.",
+        ],
+      },
+      {
+        h: "Established homes: currently banned",
+        p: [
+          "Since 1 April 2025, foreign persons, including temporary residents and foreign-owned companies, generally cannot buy established (existing) dwellings. The ban has been extended to 30 June 2029. Limited exceptions apply, mainly for investments that add to housing supply.",
+        ],
+      },
+      {
+        h: "New dwellings and vacant land",
+        p: [
+          "Foreign persons can usually buy new dwellings and vacant residential land for development, but need foreign investment approval before signing, or must make the contract conditional on approval. Application fees apply and can be significant. Vacant land must generally be developed within a set time.",
+        ],
+      },
+      {
+        h: "Victorian taxes for foreign buyers",
+        list: [
+          "Foreign purchaser additional duty: 8% of the price of residential property, on top of ordinary stamp duty",
+          "Absentee owner surcharge: an extra 4% land tax each year for absentee owners, on top of ordinary land tax",
+          "Vacant residential land tax: applies to homes left vacant for more than six months in a year",
+        ],
+      },
+      {
+        h: "When you sell",
+        p: [
+          "Buyers must withhold 15% of the price and pay it to the ATO unless the seller gives a clearance certificate showing they are an Australian resident for tax purposes. Overseas sellers should plan for this.",
+        ],
+      },
+      {
+        h: "Before you sign",
+        p: [
+          "Victorian contracts can become binding quickly, and cooling-off rights are limited, especially at auction. Have the contract and vendor's statement reviewed, confirm your foreign person status, and check finance and approvals first.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "wills-for-families-with-assets-in-two-countries",
+    oldSlug: "",
+    title: "Wills and estates for families with assets in Australia and India",
+    summary:
+      "Making a valid will in Victoria, why you may need a separate Indian will, and how estates are administered across two countries.",
+    category: "Wills & estates",
+    author: "Prakash Srinivasan",
+    published: "21 October 2026",
+    updated: "21 October 2026",
+    body: [
+      {
+        p: [
+          "Many families in Australia own property, bank accounts or shares in India. Without planning, an estate can take years to administer across two legal systems. A little preparation now makes things much easier for your family.",
+        ],
+      },
+      {
+        h: "Making a valid will in Victoria",
+        list: [
+          "the will must be in writing and signed by you in the presence of two witnesses, who also sign",
+          "a witness, or the partner of a witness, should not be a beneficiary",
+          "in some circumstances, wills can be signed and witnessed by audio-visual link with a special witness such as a lawyer",
+          "marriage generally revokes an earlier will, and divorce revokes gifts to a former spouse, so review your will when your relationship changes",
+        ],
+      },
+      {
+        h: "One will or two?",
+        p: [
+          "A single Australian will can cover worldwide assets. However, Indian property is dealt with under Indian law, and Indian authorities may require Indian probate or other formalities. Many families find a separate Indian will, covering only Indian assets, makes administration faster.",
+          "If you have two wills, each must be drafted so that it does not revoke the other. We prepare the Australian will and work with Indian counsel, engaged by you, on the Indian will.",
+        ],
+      },
+      {
+        h: "Enduring powers of attorney",
+        p: [
+          "An enduring power of attorney lets someone you trust manage your financial affairs if you lose capacity. A Victorian enduring power of attorney may not be recognised in India for Indian assets, so a separate Indian power of attorney may also be needed.",
+        ],
+      },
+      {
+        h: "After a death",
+        p: [
+          "The executor usually applies to the Supreme Court of Victoria for a grant of probate. If there is no will, the estate is distributed under the intestacy rules. In Victoria, certain people can apply for further provision from an estate, generally within six months of the grant of probate.",
+        ],
+      },
+      {
+        h: "Practical steps",
+        list: [
+          "list your assets in each country and how each is owned",
+          "review nominations for superannuation, which are not automatically covered by your will",
+          "keep originals safe and tell your executor where they are",
+          "review your will every few years or after a major life change",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "resolving-business-disputes-in-victoria",
+    oldSlug: "",
+    title: "Resolving business disputes in Victoria",
+    summary:
+      "From letter of demand to court: the options, the costs, time limits, and what happens when the other party is in India.",
+    category: "Disputes & litigation",
+    author: "Prakash Srinivasan",
+    published: "21 October 2026",
+    updated: "21 October 2026",
+    body: [
+      {
+        p: [
+          "Most business disputes are resolved without a trial. Acting early, keeping good records and understanding your options give you the best chance of a quick and cost-effective outcome.",
+        ],
+      },
+      {
+        h: "First steps",
+        list: [
+          "gather the contract, invoices, emails and other documents",
+          "check any dispute resolution clause in the contract, which may require negotiation or mediation first",
+          "send a clear letter of demand setting out the claim and a deadline",
+        ],
+      },
+      {
+        h: "Which court?",
+        list: [
+          "Magistrates' Court of Victoria: claims up to $100,000",
+          "County Court of Victoria: larger claims, including in its Commercial Division",
+          "Supreme Court of Victoria: the largest and most complex claims",
+          "VCAT: some disputes, including many consumer and domestic building disputes",
+        ],
+      },
+      {
+        p: [
+          "Before starting proceedings, parties are expected to take reasonable steps to resolve the dispute, and to act honestly and cooperatively throughout. Most civil cases go to mediation before trial.",
+        ],
+      },
+      {
+        h: "Time limits",
+        p: [
+          "In Victoria, a claim for breach of contract must generally be brought within six years of the breach. Other claims have different limits. Do not wait until the deadline is close.",
+        ],
+      },
+      {
+        h: "Costs",
+        p: [
+          "The successful party usually recovers part of its legal costs from the other side, but rarely all of them. We give you a written estimate and update it as the matter progresses.",
+        ],
+      },
+      {
+        h: "When the other party is in India",
+        p: [
+          "Australia is not a “reciprocating territory” under India's Code of Civil Procedure. An Australian court judgment usually cannot be executed directly in India; a fresh suit is generally needed in India, based on the Australian judgment. Arbitration awards may be easier to enforce. If you trade with Indian parties, consider the dispute resolution clause carefully when you sign the contract, and get advice from Indian counsel on enforcement.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "one-matter-two-countries",
+    oldSlug: "",
+    title: "One matter, two countries: how cross-border matters work",
+    summary:
+      "How we handle the Australian side of a matter with an Indian dimension, and what to expect when working with lawyers in both countries.",
+    category: "Cross-border matters",
+    author: "Prakash Srinivasan",
+    published: "21 October 2026",
+    updated: "21 October 2026",
+    body: [
+      {
+        p: [
+          "A family separation with property in Bengaluru. An Indian company opening in Melbourne. An estate with bank accounts in Chennai. Many matters touch both countries, and each part is governed by that country's law.",
+        ],
+      },
+      {
+        h: "Who advises on what",
+        p: [
+          "Praevo Lawyers advises on Australian law. Where a matter involves Indian law, such as a property transfer, succession, FEMA approvals or proceedings in an Indian court, independent Indian counsel advise on that part. You engage and pay each firm directly, and no referral fees are paid.",
+        ],
+      },
+      {
+        h: "How we coordinate",
+        list: [
+          "map which parts of the matter are Australian and which are Indian",
+          "agree one timeline and one point of contact for you",
+          "share information between the two firms only with your consent",
+          "make sure documents work in both countries, for example wills, powers of attorney and contracts",
+        ],
+      },
+      {
+        h: "Documents for use in India",
+        p: [
+          "Documents signed in Australia for use in India often need to be notarised and apostilled. Both countries are parties to the Apostille Convention. Check the exact requirements with the receiving authority or your Indian lawyer before you sign.",
+        ],
+      },
+      {
+        h: "Time zones and meetings",
+        p: [
+          "Melbourne is 4.5 to 5.5 hours ahead of India, depending on daylight saving. We arrange video meetings at times that suit you and your Indian advisers.",
+        ],
+      },
+    ],
+  },
 ];
+
+// Topics = practice areas that have at least one article, in practice-area order.
+
+export const topicSlug = (a: Article) => areas.find((x) => x.title === a.category)?.slug ?? "general";
+export const coverImage = (a: Article) => `/blog/${a.slug}.svg`;
+export const coverImagePng = (a: Article) => `/blog/${a.slug}.png`;
+export const topics = areas
+  .filter((t) => articles.some((a) => a.category === t.title))
+  .map((t) => ({ slug: t.slug, title: t.title }));
