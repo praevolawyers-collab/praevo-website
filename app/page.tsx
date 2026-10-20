@@ -21,9 +21,18 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-side">
-            <div><strong>Video consultations</strong>From Australia, India or anywhere, at a time that suits your time zone.</div>
-            <div><strong>Fees in writing first</strong>Fixed or capped fees where possible, quoted before work starts.</div>
-            <div><strong>Regulated in Victoria</strong>An Australian law practice led by a practising principal solicitor.</div>
+            <Link href="/book" className="hero-card">
+              <strong>Video consultations <span aria-hidden="true">→</span></strong>
+              From Australia, India or anywhere, at a time that suits your time zone.
+            </Link>
+            <Link href="/fees" className="hero-card">
+              <strong>Fees in writing first <span aria-hidden="true">→</span></strong>
+              Fixed or capped fees where possible, quoted before work starts.
+            </Link>
+            <Link href="/about#regulation" className="hero-card">
+              <strong>Regulated in Victoria <span aria-hidden="true">→</span></strong>
+              An Australian law practice led by a practising principal solicitor.
+            </Link>
           </div>
         </div>
       </section>

@@ -37,7 +37,7 @@ export default function About() {
       </section>
       <section className="section stone">
         <div className="wrap prose">
-          <h2 style={{ marginTop: 0 }}>Regulation</h2>
+          <h2 id="regulation" style={{ marginTop: 0, scrollMarginTop: 120 }}>Regulation</h2>
           <p>{firm.regulatory}</p>
           <p>{firm.pss}</p>
           <p><Link href="/our-people">Meet our team →</Link></p>
