@@ -310,6 +310,18 @@ export const areas: Area[] = [
   },
 ];
 
+// Homepage "Where would you like to start?" cards. `area` must match a practice area slug.
+export const situations = [
+  { icon: "plane", title: "Moving to Australia", text: "Skilled, partner, parent and student visas, from first eligibility check to decision.", area: "visas-and-migration" },
+  { icon: "people", title: "Hiring staff from overseas", text: "Sponsorship, nominations and visas for the people your business needs.", area: "employer-sponsorship" },
+  { icon: "building", title: "Bringing your business to Australia", text: "Company set-up, FIRB approval and contracts for overseas and Indian businesses.", area: "market-entry-and-firb" },
+  { icon: "home", title: "Buying property in Australia", text: "Contract review, FIRB and settlement, including for buyers who live overseas.", area: "property" },
+  { icon: "heart", title: "Separating or sorting parenting arrangements", text: "Property settlements and parenting plans, including assets in India or elsewhere.", area: "family-law" },
+  { icon: "scroll", title: "Planning your estate", text: "Wills, powers of attorney and probate for families with assets in more than one country.", area: "wills-and-estates" },
+  { icon: "scale", title: "In a business dispute", text: "Contract, debt and shareholder disputes, from letter of demand to court.", area: "disputes-and-litigation" },
+  { icon: "shield", title: "Facing a criminal charge", text: "Urgent advice and representation, and advice on any visa consequences.", area: "criminal-law" },
+];
+
 export const corridor = [
   {
     title: "Indian businesses entering Australia",

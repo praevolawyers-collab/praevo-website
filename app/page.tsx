@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { firm, areas, corridor, steps, people } from "@/content/site";
+import { firm, areas, corridor, steps, people, situations } from "@/content/site";
 import { CtaBand } from "@/components/Blocks";
+import Icon from "@/components/Icon";
 
 export default function Home() {
   const principal = people[0];
@@ -30,8 +31,35 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <div className="head-row">
-            <h2>How we can help</h2>
-            <Link href="/expertise">All practice areas →</Link>
+            <div>
+              <p className="eyebrow">Who we help</p>
+              <h2>Where would you like to start?</h2>
+            </div>
+            <Link href="/contact">Not sure? Send us a short enquiry →</Link>
+          </div>
+          <div className="situations">
+            {situations.map((s) => {
+              const area = areas.find((a) => a.slug === s.area)!;
+              return (
+                <div key={s.title} className="situation">
+                  <span className="icon"><Icon name={s.icon} /></span>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
+                  <Link href={`/expertise/${area.slug}`} className="pill">
+                    {area.title} <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section white">
+        <div className="wrap">
+          <div className="head-row">
+            <h2>All practice areas</h2>
+            <Link href="/expertise">View expertise →</Link>
           </div>
           <div className="tiles">
             {areas.map((a, i) => (
