@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { areas } from "@/content/site";
+import { areas, firm } from "@/content/site";
+import { faqs, areaSeo } from "@/content/faqs";
 import { articles, topicSlug } from "@/content/insights";
 import ArticleGrid from "@/components/ArticleGrid";
 import { PageHero, CtaBand } from "@/components/Blocks";
@@ -13,7 +14,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const a = areas.find((x) => x.slug === slug);
-  return a ? { title: a.title, description: `${a.intro} Praevo Lawyers, Melbourne.` } : {};
+  if (!a) return {};
+  const seo = areaSeo[a.slug];
+  return {
+    title: seo?.title ?? a.title,
+    description: seo?.description ?? a.intro,
+    alternates: { canonical: `/expertise/${a.slug}` },
+    openGraph: { title: seo?.title ?? a.title, description: seo?.description ?? a.intro },
+  };
 }
 
 export default async function AreaPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -22,16 +30,38 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
   if (!a) notFound();
   const posts = articles.filter((p) => topicSlug(p) === a.slug);
 
+  const qa = faqs[a.slug] ?? a.faqs;
+  const seo = areaSeo[a.slug];
+  const serviceLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: a.title,
+    name: seo?.h1 ?? a.title,
+    description: a.intro,
+    areaServed: [{ "@type": "City", name: "Melbourne" }, { "@type": "State", name: "Victoria" }, { "@type": "Country", name: "Australia" }],
+    provider: { "@type": "LegalService", name: firm.name, url: firm.url, telephone: firm.phone },
+  };
+  const crumbsLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: firm.url },
+      { "@type": "ListItem", position: 2, name: "Expertise", item: `${firm.url}/expertise` },
+      { "@type": "ListItem", position: 3, name: a.title, item: `${firm.url}/expertise/${a.slug}` },
+    ],
+  };
   const faqLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: a.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    mainEntity: qa.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
-      <PageHero eyebrow="Expertise" title={a.title} lead={a.intro} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumbsLd) }} />
+      <PageHero eyebrow={`Expertise · ${a.title}`} title={seo?.h1 ?? a.title} lead={a.intro} />
       <section className="section">
         <div className="wrap split">
           <div className="wide">
@@ -62,8 +92,8 @@ export default async function AreaPage({ params }: { params: Promise<{ slug: str
       </section>
       <section className="section stone">
         <div className="wrap faq" style={{ maxWidth: 860 }}>
-          <h2 style={{ marginBottom: 16 }}>Common questions</h2>
-          {a.faqs.map((f) => (
+          <h2 style={{ marginBottom: 16 }}>Common questions about {a.title.toLowerCase()}</h2>
+          {qa.map((f) => (
             <details key={f.q}>
               <summary>{f.q}</summary>
               <p>{f.a}</p>

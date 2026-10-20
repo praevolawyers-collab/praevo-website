@@ -6,6 +6,8 @@ import ArticleGrid from "@/components/ArticleGrid";
 import { firm } from "@/content/site";
 import { PageHero, CtaBand } from "@/components/Blocks";
 
+const isoDate = (d: string) => new Date(`${d} 12:00 UTC`).toISOString().slice(0, 10);
+
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
 }
@@ -13,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const a = articles.find((x) => x.slug === slug);
-  return a ? { title: a.title, description: a.summary, openGraph: { type: "article", images: [coverImagePng(a)] } } : {};
+  return a ? { title: a.title, description: a.summary, alternates: { canonical: `/insights/${a.slug}` }, openGraph: { type: "article", images: [coverImagePng(a)], publishedTime: isoDate(a.published), modifiedTime: isoDate(a.updated) } } : {};
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -31,7 +33,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     headline: a.title,
     description: a.summary,
     author: { "@type": "Person", name: a.author },
-    publisher: { "@type": "Organization", name: firm.name },
+    publisher: { "@type": "Organization", name: firm.name, logo: { "@type": "ImageObject", url: `${firm.url}/logo-full.png` } },
+    datePublished: isoDate(a.published),
+    dateModified: isoDate(a.updated),
+    image: `${firm.url}${coverImagePng(a)}`,
+    mainEntityOfPage: `${firm.url}/insights/${a.slug}`,
+    articleSection: a.category,
   };
 
   return (
