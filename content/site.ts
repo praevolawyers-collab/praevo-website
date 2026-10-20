@@ -21,7 +21,7 @@ export const firm = {
   email: "info@praevo.com.au",
   hours: "Monday to Friday, 9:00am – 5:30pm (Melbourne time)",
   consultationFee: "$330, plus GST for clients in Australia",
-  googleReviewUrl: "https://g.page/r/CeQW4i0Qfzy-EAE/review",
+  googleReviewUrl: "https://g.page/r/CeQW4i0Qfzy-EBM/review",
   googleProfileUrl: "https://www.google.com/maps/search/?api=1&query=Praevo+Lawyers+227+Collins+Street+Melbourne",
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/praevolawyers/30min",
   regulatory:
