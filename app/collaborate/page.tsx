@@ -6,9 +6,9 @@ import Icon from "@/components/Icon";
 import { areas } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "Collaborate with us: for Indian law firms",
+  title: "Collaborate with us: for Indian and overseas law firms",
   description:
-    "For law firms in India: refer clients who need Australian legal help, or work with Praevo Lawyers, Melbourne, on matters with both an Indian and an Australian side.",
+    "For law firms in India and overseas: refer clients who need Australian legal help, and act for Praevo Lawyers' clients on matters in your country. Starting with India; UK, Singapore and Malaysia to follow.",
   alternates: { canonical: "/collaborate" },
 };
 
@@ -61,9 +61,9 @@ export default function Collaborate() {
   return (
     <>
       <PageHero
-        eyebrow="The Firm · For law firms in India"
+        eyebrow="The Firm · For overseas law firms"
         title="Collaboration that works in both directions."
-        lead="Our clients in Australia regularly have legal matters in India, and your clients in India have matters in Australia. We work with independent Indian law firms so that each side is handled by a lawyer qualified in that country. This page is for law firms."
+        lead="Our clients in Australia often have legal matters overseas, and overseas firms have clients with matters in Australia. We work with independent law firms so that each side is handled by a lawyer qualified in that country. We are starting with India, where many of our clients have family, property and business ties. This page is for law firms."
       />
 
       <section className="section">
@@ -93,8 +93,8 @@ export default function Collaborate() {
           <p className="eyebrow" style={{ color: "var(--gold-text)" }}>From Australia to India</p>
           <h2 style={{ marginBottom: 10 }}>Indian-law work our clients need</h2>
           <p className="muted" style={{ marginBottom: 32, maxWidth: 760 }}>
-            Our practice serves the Indian community in Australia. Many clients come to us with matters that have to be
-            run in India, by an Indian advocate. These are the matters we look to refer to firms we work with.
+            A large part of our practice is clients with ties to India. Many come to us with matters that have to be run
+            in India, by an Indian advocate. These are the matters we look to refer to firms we work with.
           </p>
           <div className="situations">
             {indiaWork.map((w) => (
@@ -171,6 +171,17 @@ export default function Collaborate() {
               <li>Collaborating firms are named on our website only with their written consent.</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap" style={{ maxWidth: 860 }}>
+          <h2 style={{ marginBottom: 10 }}>Beyond India</h2>
+          <p className="muted">
+            India is where we are starting. We plan to build the same two-way arrangements with independent firms in the
+            United Kingdom, Singapore, Malaysia and other countries where our clients have ties. If your firm practises in
+            one of those countries, we would be glad to hear from you through the form below.
+          </p>
         </div>
       </section>
 

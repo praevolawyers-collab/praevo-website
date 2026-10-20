@@ -37,7 +37,7 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
       {kind === "collaborate" && (
         <div className="row">
           <label>Firm name<input name="firm" required /></label>
-          <label>City<input name="city" required /></label>
+          <label>City and country<input name="city" required placeholder="e.g. Bengaluru, India" /></label>
         </div>
       )}
       {kind === "collaborate" && (
@@ -48,7 +48,7 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
               <option value="" disabled>Select…</option>
               <option>Refer a client who needs Australian legal help</option>
               <option>Work together on a cross-border matter</option>
-              <option>Take on Indian-law work for Praevo&apos;s clients</option>
+              <option>Act for Praevo&apos;s clients in India or elsewhere</option>
               <option>Something else</option>
             </select>
           </label>
@@ -59,7 +59,7 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
               <optgroup label="Australian law">
                 {areas.map((a) => <option key={a.slug}>{a.title}</option>)}
               </optgroup>
-              <optgroup label="Indian law (for our clients)">
+              <optgroup label="Law of India or another country (for our clients)">
                 {["Family law in India", "Property in India", "Succession and estates in India", "Civil and commercial disputes in India", "Criminal matters in India", "Business set-up in India"].map((t) => <option key={t}>{t}</option>)}
               </optgroup>
             </select>
@@ -82,7 +82,7 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
             </select>
           </label>
         ) : (
-          <label>Bar Council enrolment number(s)<input name="enrolment" /></label>
+          <label>Enrolment or practising certificate number(s)<input name="enrolment" /></label>
         )}
       </div>
       {kind === "collaborate" && (
