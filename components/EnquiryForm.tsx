@@ -48,15 +48,20 @@ export default function EnquiryForm({ kind }: { kind: Kind }) {
               <option value="" disabled>Select…</option>
               <option>Refer a client who needs Australian legal help</option>
               <option>Work together on a cross-border matter</option>
-              <option>Receive referrals of Indian-law work</option>
+              <option>Take on Indian-law work for Praevo&apos;s clients</option>
               <option>Something else</option>
             </select>
           </label>
           <label>
-            Area of Australian law (if known)
+            Area of law (if known)
             <select name="area" defaultValue="">
               <option value="">Not sure / not applicable</option>
-              {areas.map((a) => <option key={a.slug}>{a.title}</option>)}
+              <optgroup label="Australian law">
+                {areas.map((a) => <option key={a.slug}>{a.title}</option>)}
+              </optgroup>
+              <optgroup label="Indian law (for our clients)">
+                {["Family law in India", "Property in India", "Succession and estates in India", "Civil and commercial disputes in India", "Criminal matters in India", "Business set-up in India"].map((t) => <option key={t}>{t}</option>)}
+              </optgroup>
             </select>
           </label>
         </div>

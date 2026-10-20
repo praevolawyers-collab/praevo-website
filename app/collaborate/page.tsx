@@ -25,9 +25,18 @@ const ways = [
   },
   {
     icon: "globe",
-    title: "Receive Indian-law work from Australia",
-    text: "Our clients in Australia often need advice on Indian law: property, succession, family matters and company work. We refer them to independent firms we know and trust in India.",
+    title: "Act for our clients in India",
+    text: "Many of our clients live in Australia but have family, property, succession or business matters in India. They need an Indian firm to advise and appear for them, and we refer those matters to firms we work with.",
   },
+];
+
+const indiaWork = [
+  { icon: "heart", title: "Family law in India", text: "Divorce, maintenance, custody and guardianship proceedings in India, including where one spouse lives in Australia and parallel proceedings run here." },
+  { icon: "home", title: "Property in India", text: "Sale and purchase by NRI and OCI owners, title checks, partition, tenant and possession disputes, and property managed under a power of attorney." },
+  { icon: "scroll", title: "Succession and estates in India", text: "Probate, letters of administration, succession and legal heir certificates, and transferring Indian assets after a death in Australia." },
+  { icon: "scale", title: "Civil and commercial disputes", text: "Recovery suits, contract disputes and cheque-dishonour matters for clients who cannot easily travel to India." },
+  { icon: "shield", title: "Criminal matters in India", text: "Anticipatory bail, quashing petitions and representation for clients living in Australia who face complaints in India." },
+  { icon: "building", title: "Australian businesses entering India", text: "Company and LLP set-up, FDI and FEMA compliance, contracts and employment for Australian clients expanding into India." },
 ];
 
 const referralAreas = [
@@ -42,10 +51,10 @@ const referralAreas = [
 ];
 
 const process = [
-  { h: "Tell us about the matter", p: "Use the form below with a short outline. Do not send confidential documents yet." },
-  { h: "We run a conflict check", p: "We confirm within two business days whether we can act, and who will handle it." },
-  { h: "The client engages us directly", p: "We give the client our own costs disclosure and terms. Your engagement with the client is unaffected." },
-  { h: "We keep you in the loop", p: "With the client's consent, we update you on the Australian side so the advice fits together." },
+  { h: "Tell us about the matter", p: "Either firm sends a short outline. No confidential documents until conflicts are cleared." },
+  { h: "We run a conflict check", p: "The receiving firm confirms whether it can act. We reply within two business days." },
+  { h: "The client engages us directly", p: "Each firm gives the client its own costs disclosure and terms. Neither firm's existing engagement is affected." },
+  { h: "We keep you in the loop", p: "With the client's consent, the two firms keep each other updated so the advice fits together." },
 ];
 
 export default function Collaborate() {
@@ -53,15 +62,15 @@ export default function Collaborate() {
     <>
       <PageHero
         eyebrow="The Firm · For law firms in India"
-        title="Work with us on matters that reach Australia."
-        lead="We work with independent law firms in India on clients and matters with an Australian side, in both directions. This page is for law firms. If you are a client, please see our contact page."
+        title="Collaboration that works in both directions."
+        lead="Our clients in Australia regularly have legal matters in India, and your clients in India have matters in Australia. We work with independent Indian law firms so that each side is handled by a lawyer qualified in that country. This page is for law firms."
       />
 
       <section className="section">
         <div className="wrap">
           <h2 style={{ marginBottom: 10 }}>How we can work together</h2>
           <p className="muted" style={{ marginBottom: 32, maxWidth: 720 }}>
-            Three ways a firm in India can work with Praevo Lawyers. Each one is on a matter-by-matter basis, and each firm
+            Work flows both ways: you refer clients with Australian matters to us, and we refer our clients with Indian matters to you. Each arrangement is matter by matter, and each firm
             advises only on its own country&apos;s law.
           </p>
           <div className="situations">
@@ -81,6 +90,31 @@ export default function Collaborate() {
 
       <section className="section stone">
         <div className="wrap">
+          <p className="eyebrow" style={{ color: "var(--gold-text)" }}>From Australia to India</p>
+          <h2 style={{ marginBottom: 10 }}>Indian-law work our clients need</h2>
+          <p className="muted" style={{ marginBottom: 32, maxWidth: 760 }}>
+            Our practice serves the Indian community in Australia. Many clients come to us with matters that have to be
+            run in India, by an Indian advocate. These are the matters we look to refer to firms we work with.
+          </p>
+          <div className="situations">
+            {indiaWork.map((w) => (
+              <div key={w.title} className="situation">
+                <span className="icon"><Icon name={w.icon} /></span>
+                <h3>{w.title}</h3>
+                <p>{w.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="small muted" style={{ marginTop: 24, maxWidth: 760 }}>
+            Our clients engage the Indian firm directly, on its own terms and fees. We help with the Australian side, such as
+            documents signed and witnessed here and any related Australian proceedings, and stay in touch with the client&apos;s consent.
+          </p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap">
+          <p className="eyebrow" style={{ color: "var(--gold-text)" }}>From India to Australia</p>
           <h2 style={{ marginBottom: 10 }}>Australian work we take on referral</h2>
           <p className="muted" style={{ marginBottom: 32, maxWidth: 720 }}>
             Matters firms in India most often send us. Our team speaks English, Hindi, Tamil, Kannada and Marathi.
@@ -103,10 +137,10 @@ export default function Collaborate() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section stone">
         <div className="wrap split">
           <div className="narrow">
-            <h2>How a referral works</h2>
+            <h2>How a referral works, either way</h2>
           </div>
           <div className="wide">
             <ol className="steps" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
@@ -121,7 +155,7 @@ export default function Collaborate() {
         </div>
       </section>
 
-      <section className="section stone">
+      <section className="section">
         <div className="wrap split">
           <div className="narrow">
             <h2>The ground rules</h2>
@@ -140,7 +174,7 @@ export default function Collaborate() {
         </div>
       </section>
 
-      <section className="section" id="enquire">
+      <section className="section stone" id="enquire">
         <div className="wrap" style={{ maxWidth: 860 }}>
           <h2 style={{ marginBottom: 10 }}>Refer a matter or start a conversation</h2>
           <p className="muted" style={{ marginBottom: 28 }}>
